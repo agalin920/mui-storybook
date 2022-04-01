@@ -4,6 +4,19 @@ import Button from './Button';
 export default {
   title: 'Button',
   component: Button,
+  argTypes: {
+    color: {
+      options: ['primary', 'secondary', 'naimify', 'error'],
+      control: { type: 'select' },
+    },
+    variant: {
+      options: ['contained', 'outlined', 'text'],
+      control: { type: 'radio' },
+    },
+    disabled: {
+      control: 'boolean',
+    }
+  },
 }  ;
 
 const Template = (args) => {
@@ -13,12 +26,9 @@ const Template = (args) => {
   )
 };
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Default = Template.bind({});
+Default.args = {
   color: 'primary',
-}
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  color: 'secondary',
+  variant: 'contained',
+  disabled: false,
 }

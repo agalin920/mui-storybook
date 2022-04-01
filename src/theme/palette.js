@@ -1,20 +1,40 @@
-const palette = {
+export const palette = {
   primary: {
-    main: '#FF5F14',
-    dark: '#F54100',
-    light: '#D12D00',
+    main: '#63a41e',
+    dark: '#63a41e',
+    light: '#63a41e',
     contrastText: '#FFFFFF',
-    gradient1: 'linear-gradient(315deg, #D12D00 0%, #FF5F14 100%)',
-    background: '#FFF3ED',
   },
   secondary: {
-    main: '#009ED9',
-    dark: '#0079AD',
-    light: '#005E8C',
+    main: '#336edb',
+    dark: '#336edb',
+    light: '#336edb',
     contrastText: '#FFFFFF',
-    gradient1: 'linear-gradient(315deg, #005E8C 0%, #009ED9 100%)',
-    background: '#EDFAFF',
+  },
+  tertiary: {
+    main: '#404759',
+    dark: '#404759',
+    light: '#404759',
+    contrastText: '#FFFFFF',
+  },
+  error: {
+    main: '#9a2803',
+    dark: '#9a2803',
+    light: '#9a2803',
+    contrastText: '#FFFFFF',
+  },
+  action: {
+    active: 'rgba(0,0,0,54)',
+    hover: 'rgba(0,0,0,0.04)',
+    hoverOpacity: 0.04,
+    selected: 'rgba(0,0,0,0.08)',
+    selectedOpacity: 0.08,
+    disabled: 'rgba(26, 32, 44, 0.4)',
+    disabledBackground: 'rgba(26, 32, 44, 0.12)',
+    disabledOpacity: 0.4,
+    focus: 'rgba(0,0,0,0.12)',
+    focusOpacity: 0.12,
+    activatedOpacity: 0.12,
   },
 };
 
-export default palette;
