@@ -4,27 +4,26 @@ import MuiTextField, { TextFieldProps } from '@mui/material/TextField';
 
 import theme from '../../theme';
 
-export const TextField = ({
+export const TextField = (
   // allow nested component props to be extended/overwritten
-  InputProps,
-  InputLabelProps,
-  FormHelperTextProps,
-  ...textFieldProps
-}) => {
+  // InputProps,
+  // InputLabelProps,
+  // FormHelperTextProps,
+  props
+) => {
   return (
     <ThemeProvider theme={theme}>
       <MuiTextField
         data-testid="mds-text-field"
         variant="standard"
-        InputProps={{
-          ...InputProps,
-        }}
-        InputLabelProps={{
-          shrink: true,
-          ...InputLabelProps,
-        }}
-        FormHelperTextProps={{ ...FormHelperTextProps }}
-        {...textFieldProps}
+        // InputProps={{
+        //   ...InputProps,
+        // }}
+        // InputLabelProps={{
+        //   ...InputLabelProps,
+        // }}
+        // FormHelperTextProps={{ ...FormHelperTextProps }}
+        {...props}
       />
     </ThemeProvider>
   );
