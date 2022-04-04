@@ -3,6 +3,7 @@
 ### How to run
 
 ```bash
-npm i
+npm install
+
 npm run storybook
 ```
