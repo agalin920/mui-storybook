@@ -1,6 +1,6 @@
 # MUI Storybook 
 
-### How to run
+### How To Run
 
 ```bash
 npm install
