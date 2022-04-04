@@ -15,7 +15,7 @@ export const TextField = (
     <ThemeProvider theme={theme}>
       <MuiTextField
         data-testid="mds-text-field"
-        variant="standard"
+        // variant="standard"
         // InputProps={{
         //   ...InputProps,
         // }}
