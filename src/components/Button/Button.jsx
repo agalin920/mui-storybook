@@ -4,10 +4,12 @@ import MuiButton, { ButtonProps } from '@mui/material/Button';
 
 const Button = (props) => {
   return (
+    <ThemeProvider theme={theme}>
       <MuiButton
         data-testid="mds-button"
         {...props}
       />
+    </ThemeProvider>
   );
 };
 
