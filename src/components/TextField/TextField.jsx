@@ -1,0 +1,36 @@
+import React from 'react';
+import { styled, ThemeProvider } from '@mui/material/styles';
+import MuiTextField, { TextFieldProps } from '@mui/material/TextField';
+
+import theme from '../../theme';
+
+export const TextField = ({
+  // allow nested component props to be extended/overwritten
+  InputProps,
+  InputLabelProps,
+  FormHelperTextProps,
+  ...textFieldProps
+}) => {
+  return (
+    <ThemeProvider theme={theme}>
+      <MuiTextField
+        data-testid="mds-text-field"
+        variant="standard"
+        InputProps={{
+          ...InputProps,
+        }}
+        InputLabelProps={{
+          shrink: true,
+          ...InputLabelProps,
+        }}
+        FormHelperTextProps={{ ...FormHelperTextProps }}
+        {...textFieldProps}
+      />
+    </ThemeProvider>
+  );
+};
+
+// const MuiTextFieldStyled = styled(MuiTextField)<TextFieldProps>(
+//   ({ theme }) => ({
+//   })
+// );
