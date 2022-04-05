@@ -1,9 +1,10 @@
 import React from 'react';
-import { TextField } from './TextField';
+import MenuItem from '@mui/material/MenuItem';
+import { Select } from './Select';
 
 export default {
-  title: 'TextField',
-  component: TextField,
+  title: 'Select',
+  component: Select,
   argTypes: {
     color: {
       options: ['primary', 'secondary', 'tertiary', 'error'],
@@ -13,25 +14,28 @@ export default {
       options: ['filled', 'outlined', 'standard'],
       control: { type: 'radio' },
     },
+    disabled: {
+      control: 'boolean',
+    },
   },
 }  ;
 
 const Template = (args) => {
 
   return (
-    <TextField {...args} />
+    <Select {...args}>
+      <MenuItem value={1}>1</MenuItem>
+      <MenuItem value={2}>2</MenuItem>
+      <MenuItem value={3}>3</MenuItem>
+      </Select>
   )
 };
 
 export const Default = Template.bind({});
 Default.args = {
-  variant: 'outlined',
-  helperText: 'some helper text',
-  placeholder: 'some placeholder text',
+  color: 'primary',
   label: 'some label',
   disabled: false,
-  error: false,
-  multiline: false,
-  rows: 1,
-  required: false,
+  variant: 'outlined',
+  value: 1,
 }
