@@ -1,10 +1,10 @@
 import React from 'react';
-import { Button } from './Button';
-import FileCopyIcon from '@mui/icons-material/FileCopy';
+import { Button } from '../Button/Button';
+import { ButtonGroup } from './ButtonGroup';
 
 export default {
-  title: 'Button',
-  component: Button,
+  title: 'ButtonGroup',
+  component: ButtonGroup,
   argTypes: {
     color: {
       options: ['primary', 'secondary', 'tertiary', 'error'],
@@ -18,6 +18,10 @@ export default {
       options: ['small', 'medium', 'large'],
       control: { type: 'radio' },
     },
+    orientation: {
+      options: ['horizontal', 'vertical'],
+      control: { type: 'radio' },
+    },
     disabled: {
       control: 'boolean',
     }
@@ -27,21 +31,19 @@ export default {
 const Template = (args) => {
 
   return (
-    <Button {...args}>Button</Button>
+    <ButtonGroup {...args}>
+      <Button>One</Button>
+      <Button>Two</Button>  
+      <Button>Three</Button>  
+    </ButtonGroup>
   )
 };
 
 export const Default = Template.bind({});
 Default.args = {
   color: 'primary',
-  variant: 'contained',
+  variant: 'outlined',
   disabled: false,
-}
-
-export const WithIcon = Template.bind({});
-WithIcon.args = {
-  color: 'primary',
-  variant: 'contained',
-  disabled: false,
-  startIcon: <FileCopyIcon />
+  orientation: 'horizontal',
+  size: 'medium',
 }
