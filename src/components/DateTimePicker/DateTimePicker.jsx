@@ -1,13 +1,13 @@
 import * as React from 'react';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
-import MuiDatePicker from '@mui/lab/DatePicker';
+import MuiDateTimePicker from '@mui/lab/DateTimePicker';
 
-export const DatePicker = (props) => {
+export const DateTimePicker = (props) => {
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <MuiDatePicker
-        data-testid="zds-date-picker"
+      <MuiDateTimePicker
+        data-testid="zds-date-time-pickert"
         {...props}
       />
     </LocalizationProvider>
